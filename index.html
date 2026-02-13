@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lol</title>
-    <style>
-        h1 {
-            font-weight: bold;
-            text-align: center;
-            font-size: 100px;
-        }
-
-        button {
-            position: absolute;
-            bottom: 2px;
-            right: 10px;
-        }
-    </style>
+    <title>Math test</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Fuck 
-        you</h1>
-
-        <div>
-            <a href="zach.html"><button>click</button></a>
+    <h3 class="title" id="title">Anser da questions:</h3>
+    <div class="container" id="container">
+        <div class="question" id="q1">
+            <p>1. What is 2 + 2?</p>
+            <input type="text" id="answer1" placeholder="Your answer">
         </div>
+        <div class="question" id="q2">
+            <p>2. What is 5 * 3?</p>
+            <input type="text" id="answer2" placeholder="Your answer">
+        </div>
+        <div class="question" id="q3">
+            <p>3. What is 10 / 2?</p>
+            <input type="text" id="answer3" placeholder="Your answer">
+        </div>
+        <button onclick="checkAnswers()">Submit</button>
+    </div>
+    <script>
+        answer1 = "4"
+    aanswer2 = "15"
+    answer3 = "5"
+function checkAnswers() {
+    const answer1 = document.getElementById('answer1').value.trim();
+    const answer2 = document.getElementById('answer2').value.trim();
+    const answer3 = document.getElementById('answer3').value.trim();    
+    if (answer1 === "4" && answer2 === "15" && answer3 === "5") {
+        alert("Correct! All answers are right.");
+        document.bgColor = "green";
+    } else {
+        alert("Incorrect! Please try again.");
+    }
+}
+    </script>
 </body>
 </html>
